@@ -4,7 +4,6 @@ excel-uuids
 generate an excel file of random v4 uuids
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
 
 <!-- toc -->
 * [Usage](#usage)
