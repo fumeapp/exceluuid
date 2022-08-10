@@ -20,13 +20,14 @@
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
-    "excel4node": "^1.8.0"
+    "exceljs": "^4.3.0"
   },
   "devDependencies": {
     "@oclif/test": "^2",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.4",
+    "@types/uuid": "^8.3.4",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",

@@ -1,4 +1,6 @@
-import {Command, Flags} from '@oclif/core'
+import {Command} from '@oclif/core'
+import {v4} from 'uuid'
+import * as Excel from 'exceljs'
 
 export default class Hello extends Command {
   static description = 'Generate an excel sheet'
@@ -8,7 +10,6 @@ export default class Hello extends Command {
   ]
 
   static args = [
-    {name: 'file', description: 'Filename to generate', required: true},
     {name: 'prefix', description: 'prefix before UUID', required: true},
     {name: 'amount', description: 'Amount of lines in the file', required: true},
   ]
@@ -16,6 +17,13 @@ export default class Hello extends Command {
   async run(): Promise<void> {
     const {args} = await this.parse(Hello)
 
-    this.log('we are in generate/index.ts')
+    const workbook = new Excel.Workbook()
+    const worksheet = workbook.addWorksheet('UUIDS')
+    for (let i = 0; i < args.amount; i++) {
+      worksheet.addRow([`${args.prefix}${v4()}`])
+    }
+
+    await workbook.xlsx.writeFile('output.xlsx')
+    this.log('Excel file generated')
   }
 }
