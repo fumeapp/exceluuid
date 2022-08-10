@@ -6,7 +6,7 @@ export default class Hello extends Command {
   static description = 'Generate an excel sheet'
 
   static examples = [
-    '$ oex generate https://example.com/uuid/ output 1000',
+    '$ oex generate https://example.com/uuid/ 1000',
   ]
 
   static args = [
