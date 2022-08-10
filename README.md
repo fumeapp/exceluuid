@@ -1,7 +1,7 @@
-oclif-hello-world
+excel-uuids
 =================
 
-oclif example Hello World CLI
+generate an excel file of random v4 uuids
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
@@ -29,8 +29,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`exceluuid hello PERSON`](#exceluuid-hello-person)
-* [`exceluuid hello world`](#exceluuid-hello-world)
+* [`exceluuid generate PREFIX AMOUNT`](#exceluuid-generate-prefix-amount)
 * [`exceluuid help [COMMAND]`](#exceluuid-help-command)
 * [`exceluuid plugins`](#exceluuid-plugins)
 * [`exceluuid plugins:install PLUGIN...`](#exceluuid-pluginsinstall-plugin)
@@ -42,45 +41,26 @@ USAGE
 * [`exceluuid plugins:uninstall PLUGIN...`](#exceluuid-pluginsuninstall-plugin-2)
 * [`exceluuid plugins update`](#exceluuid-plugins-update)
 
-## `exceluuid hello PERSON`
+## `exceluuid generate PREFIX AMOUNT`
 
-Say hello
+Generate an excel sheet
 
 ```
 USAGE
-  $ exceluuid hello [PERSON] -f <value>
+  $ exceluuid generate [PREFIX] [AMOUNT]
 
 ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Whom is saying hello
+  PREFIX  prefix before UUID
+  AMOUNT  Amount of lines in the file
 
 DESCRIPTION
-  Say hello
+  Generate an excel sheet
 
 EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  $ oex generate https://example.com/uuid/ output 1000
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/fumeapp/exceluuid/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `exceluuid hello world`
-
-Say hello world
-
-```
-USAGE
-  $ exceluuid hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ oex hello world
-  hello world! (./src/commands/hello/world.ts)
-```
+_See code: [dist/commands/generate/index.ts](https://github.com/fumeapp/exceluuid/blob/v0.0.0/dist/commands/generate/index.ts)_
 
 ## `exceluuid help [COMMAND]`
 
